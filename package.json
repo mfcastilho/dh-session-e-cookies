@@ -1,4 +1,23 @@
 {
+  "name": "dh-session-e-cookies",
+  "version": "1.0.0",
+  "description": "Activity for fixing the concepts of how to use Express Session and Cookie Parser from the Digital House technology school",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./src/app.js",
+    "dev": "nodemon ./src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mfcastilho/dh-session-e-cookies.git"
+  },
+  "author": "Mario Frederico de Castilho",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mfcastilho/dh-session-e-cookies/issues"
+  },
+  "homepage": "https://github.com/mfcastilho/dh-session-e-cookies#readme",
   "dependencies": {
     "bcrypt": "^5.1.0",
     "cookie-parser": "^1.4.6",
