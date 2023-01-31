@@ -15,15 +15,15 @@ Bom trabalho!
 
 - Criar um pequeno projeto do Express e implementar uma view que mostra ao visitante
 um formulário fácil que contenha:
-> - [ ] Um label que diz: "Digite seu nome", com uma entrada para receber este valor
+> - [X] Um label que diz: "Digite seu nome", com uma entrada para receber este valor
 (obrigatório).
-> - [ ] Uma lista suspensa de opções, que deve ter várias opções com nomes de cores,
+> - [X] Uma lista suspensa de opções, que deve ter várias opções com nomes de cores,
 das quais o visitante escolherá uma delas (obrigatório).
-> - [ ] Um label que diz: "Digite seu e-mail", com uma entrada para receber este valor
+> - [X] Um label que diz: "Digite seu e-mail", com uma entrada para receber este valor
 (obrigatório).
-> - [ ] Um label que diz: "Digite sua idade", com uma entrada para receber este valor
+> - [X] Um label que diz: "Digite sua idade", com uma entrada para receber este valor
 (não obrigatório).
-> - [ ] Um botão de enviar.
+> - [X] Um botão de enviar.
 
 
 - Depois de inserir os dados e clicar no botão enviar, devemos redirecionar o usuário para
