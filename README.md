@@ -28,7 +28,7 @@ das quais o visitante escolherá uma delas (obrigatório).
 
 - Depois de inserir os dados e clicar no botão enviar, devemos redirecionar o usuário para
 a mesma página e exibir um texto que diga:
-> - [ ] Olá nomeUsuário, você escolheu a cor: corSelecionada, seu e-mail é:
+> - [X] Olá nomeUsuário, você escolheu a cor: corSelecionada, seu e-mail é:
 e-mailUsuário e sua idade é: idadeUsuário.
 
 - Com Express Validator, devemos validar:
