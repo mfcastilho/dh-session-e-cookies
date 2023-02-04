@@ -35,7 +35,7 @@ e-mailUsuário e sua idade é: idadeUsuário.
 
 > - [X] Os campos que são obrigatórios: caso não sejam preenchidos, devemos exibir
 uma mensagem de erro indicando que eles devem ser preenchidos.
-> - [ ] Caso a idade seja inserida, devemos validar que seja um número; caso contrário,
+> - [X] Caso a idade seja inserida, devemos validar que seja um número; caso contrário,
 mostrar o erro.
 
 <hr>
