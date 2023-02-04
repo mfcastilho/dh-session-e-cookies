@@ -71,7 +71,7 @@
         <% } %> 
 
         <label for="age">Digite sua idade</label>
-        <input type="number" name="age" id="age" value="<%= locals.old ? old.age : "" %>">
+        <input type="text" name="age" id="age" value="<%= locals.old ? old.age : "" %>">
 
         <% if(locals.errors && errors.age){ %>
           
