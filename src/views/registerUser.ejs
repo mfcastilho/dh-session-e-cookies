@@ -6,26 +6,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Session e Cookie</title>
 
-  <link rel="stylesheet" href="../public/css/style.css">
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
   <main>
     <div class="container">
+
+      <% if(typeof userRegistered != "undefined"){ %>
+        <p class="show-msg-box">Olá <%= userRegistered.name %> você escolheu a cor: <%= userRegistered.color %>, seu email é: <%= userRegistered.email %> e sua idade é de: <%= userRegistered.age %> anos    </p>
+     <% } %> 
+        
+      
+      
       <h2>Cadastrando Usuário</h2>
       <form action="/admin/register" method="POST">
         <label for="name">Digite seu nome</label>
         <input type="text" name="name" id="name">
 
-        <label for="colors">Selecione uma cor</label>
-        <select name="colors" id="colors">
-          <option value="blue">Azul</option>
-          <option value="yellow">Amarelo</option>
-          <option value="green">Verde</option>
-          <option value="red">Vermelho</option>
-          <option value="orange">Laranja</option>
-          <option value="white">Branco</option>
-          <option value="black">Preto</option>
-          <option value="pink">Rosa</option>
+        <label for="color">Selecione uma cor</label>
+        <select name="color" id="color">
+          <option value="azul">Azul</option>
+          <option value="amarelo">Amarelo</option>
+          <option value="verde">Verde</option>
+          <option value="vermelho">Vermelho</option>
+          <option value="laranja">Laranja</option>
+          <option value="branco">Branco</option>
+          <option value="preto">Preto</option>
+          <option value="rosa">Rosa</option>
         </select>
 
         <label for="email">Digite seu e-mail</label>
@@ -37,6 +44,7 @@
         <button type="submit" class="send-btn">Enviar</button>
 
       </form>
+
     </div>
   </main>
 </body>

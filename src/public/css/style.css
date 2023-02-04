@@ -107,3 +107,10 @@ input:-webkit-autofill {
 
   background-color: rgb(190, 52, 2);
 }
+
+.show-msg-box{
+  
+  margin: 0 auto;
+
+  font-size: 2rem;
+}
