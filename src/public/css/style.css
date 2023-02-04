@@ -47,6 +47,8 @@ main{
   width: 90%;
   display: block;
   font-size: 2rem;
+
+  margin-top: 1rem;
 }
 
 .container form input{
@@ -58,7 +60,7 @@ main{
   font-size: 2rem;
 
   padding-left: .5rem;
-  margin-bottom: 2rem;
+  
 
   border-radius: .5rem;
   border: none;
@@ -81,7 +83,7 @@ input:-webkit-autofill {
 
   font-size: 2rem;
 
-  margin-bottom: 2rem;
+ 
 
   border-radius: .5rem;
   border: none;
@@ -113,4 +115,17 @@ input:-webkit-autofill {
   margin: 0 auto;
 
   font-size: 2rem;
+}
+
+.danger-container{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 1rem;
+}
+
+.danger{
+  margin-left: 5%;
+  color: red;
+  font-size: 1.4rem;
 }

@@ -20,8 +20,20 @@
       
       <h2>Cadastrando Usuário</h2>
       <form action="/admin/register" method="POST">
+
+
         <label for="name">Digite seu nome</label>
-        <input type="text" name="name" id="name">
+        <input type="text" name="name" id="name" value="<%= locals.old ? old.name : "" %>">
+
+        <% if(locals.errors && errors.name){ %>
+
+          <div class="danger-container">
+            <div class="danger">
+              <%= errors.name.msg %> 
+            </div>
+          </div>
+          
+        <% } %> 
 
         <label for="color">Selecione uma cor</label>
         <select name="color" id="color">
@@ -35,11 +47,41 @@
           <option value="rosa">Rosa</option>
         </select>
 
+        <% if(locals.errors && errors.color){ %>
+          
+          <div class="danger-container">
+            <div class="danger">
+              <%= errors.color.msg %> 
+            </div>
+          </div>
+          
+        <% } %> 
+
         <label for="email">Digite seu e-mail</label>
-        <input type="email" name="email" id="email">
+        <input type="email" name="email" id="email" value="<%= locals.old ? old.email : "" %>">
+
+        <% if(locals.errors && errors.email){ %>
+          
+          <div class="danger-container">
+            <div class="danger">
+              <%= errors.email.msg %> 
+            </div>
+          </div>
+          
+        <% } %> 
 
         <label for="age">Digite sua idade</label>
-        <input type="number" name="age" id="age">
+        <input type="number" name="age" id="age" value="<%= locals.old ? old.age : "" %>">
+
+        <% if(locals.errors && errors.age){ %>
+          
+          <div class="danger-container">
+            <div class="danger">
+              <%= errors.age.msg %> 
+            </div>
+          </div>
+          
+        <% } %> 
 
         <button type="submit" class="send-btn">Enviar</button>
 

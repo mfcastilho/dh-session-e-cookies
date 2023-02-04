@@ -1,5 +1,6 @@
 const RegisterUserModel = require("../models/RegisterUserModel");
 const {v4:makeId} = require("uuid");
+const { validationResult } = require("express-validator");
 
 const RegisterUserController = {
   showRegisterUserPage:(req, res)=>{
@@ -8,7 +9,13 @@ const RegisterUserController = {
     return res.render("registerUser.ejs", {userRegistered});
   },
   processingRegisterUser:(req, res)=>{
-    
+    const resultValidations = validationResult(req);
+
+    //se NÃO estiver vazio é por que contém erros
+    if(resultValidations.errors.length > 0){
+      return res.render("registerUser.ejs", {errors: resultValidations.mapped(), old:req.body});
+    }
+
     const { name, color, email, age } = req.body;
 
     
