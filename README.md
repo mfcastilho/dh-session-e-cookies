@@ -46,7 +46,7 @@ mostrar o erro.
 usuário selecionou no formulário e, além disso, queremos que você crie outra view que
 aplique ao body a cor escolhida pelo usuário na view do formulário e mostre a
 mensagem:
-> - [ ] nomeUsuario, agradecemos a visita.
+> - [X] nomeUsuario, agradecemos a visita.
 
 
 ### Micro desafio - Passo 3 
