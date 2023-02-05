@@ -1,5 +1,5 @@
 const RegisterUserModel = require("../models/RegisterUserModel");
-const {v4:makeId} = require("uuid");
+// const {v4:makeId} = require("uuid");
 const { validationResult } = require("express-validator");
 
 const RegisterUserController = {
@@ -20,7 +20,6 @@ const RegisterUserController = {
       return res.render("registerUser.ejs", {errors: resultValidations.mapped(), old:req.body});
     }
     
-
     const { name, color, email, age } = req.body;
 
     req.session.name= name;
