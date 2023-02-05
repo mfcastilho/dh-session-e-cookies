@@ -27,6 +27,7 @@ const RegisterUserController = {
     req.session.email= email;
     req.session.age= age;
 
+    //GUardando a informção em um cookie
     if(req.body.remember_color){
       res.cookie("color", req.body.color, {maxAge: (60 * 1000)});
     }
