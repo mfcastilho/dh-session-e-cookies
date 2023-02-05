@@ -52,7 +52,7 @@ mensagem:
 ### Micro desafio - Passo 3 
 
 - Modificar o formulário para que:
-> - [ ] Tenha uma checkbox que diga "Lembrar a cor": se o visitante da aplicação
+> - [X] Tenha uma checkbox que diga "Lembrar a cor": se o visitante da aplicação
 marcar esta check box, a cor escolhida persistirá ao fechar e reabrir o navegador.
 > - [ ] Tenha um botão que implemente a funcionalidade "Esquecer a cor" que deve
 retornar tudo ao seu estado inicial.
