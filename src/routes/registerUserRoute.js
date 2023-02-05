@@ -6,8 +6,10 @@ const RegisterUserController = require("../controllers/RegisterUserController");
 const validations = require("../middlewares/validationsUserRegisterMiddleware");
 
 
-router.get("/admin/register", RegisterUserController.showRegisterUserPage);
+router.get("/register", RegisterUserController.showRegisterUserPage);
 
-router.post("/admin/register", validations, RegisterUserController.processingRegisterUser);
+router.post("/register", validations, RegisterUserController.processingRegisterUser);
+
+router.get("/color", RegisterUserController.showColorFormPage);
 
 module.exports = router;

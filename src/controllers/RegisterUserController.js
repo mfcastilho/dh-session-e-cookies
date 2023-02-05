@@ -28,7 +28,16 @@ const RegisterUserController = {
     req.session.age= age;
 
 
-    return res.redirect("/admin/register");
+    return res.redirect("/register");
+  },
+  showColorFormPage:(req, res)=>{
+    if(req.session.name){
+      let userRegistered = req.session;
+
+      return res.render("colorForm.ejs", {userRegistered});
+    }
+
+    res.render("colorForm.ejs");
   }
 }
 
