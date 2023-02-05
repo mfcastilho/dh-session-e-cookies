@@ -8,7 +8,8 @@
 
   <link rel="stylesheet" href="/css/style.css">
 </head>
-<body>
+
+<body <%= typeof userRegistered != 'undefined' ? `style=background-color:${userRegistered.color}` : '' %> >
   <main>
     <div class="container">
 
@@ -37,14 +38,14 @@
 
         <label for="color">Selecione uma cor</label>
         <select name="color" id="color">
-          <option value="azul">Azul</option>
-          <option value="amarelo">Amarelo</option>
-          <option value="verde">Verde</option>
-          <option value="vermelho">Vermelho</option>
-          <option value="laranja">Laranja</option>
-          <option value="branco">Branco</option>
-          <option value="preto">Preto</option>
-          <option value="rosa">Rosa</option>
+          <option value="blue">Azul</option>
+          <option value="yaellow">Amarelo</option>
+          <option value="green">Verde</option>
+          <option value="red">Vermelho</option>
+          <option value="orange">Laranja</option>
+          <option value="white">Branco</option>
+          <option value="black">Preto</option>
+          <option value="pink">Rosa</option>
         </select>
 
         <% if(locals.errors && errors.color){ %>

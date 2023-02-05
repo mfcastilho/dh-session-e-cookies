@@ -5,8 +5,12 @@ const { validationResult } = require("express-validator");
 const RegisterUserController = {
   showRegisterUserPage:(req, res)=>{
 
-    let userRegistered = req.session;
-    return res.render("registerUser.ejs", {userRegistered});
+    if(req.session.name){
+      let userRegistered = req.session;
+      return res.render("registerUser.ejs", {userRegistered});
+    }
+    
+    return res.render("registerUser.ejs");
   },
   processingRegisterUser:(req, res)=>{
     const resultValidations = validationResult(req);
@@ -15,19 +19,17 @@ const RegisterUserController = {
     if(resultValidations.errors.length > 0){
       return res.render("registerUser.ejs", {errors: resultValidations.mapped(), old:req.body});
     }
+    
 
     const { name, color, email, age } = req.body;
-
-    
 
     req.session.name= name;
     req.session.color= color;
     req.session.email= email;
     req.session.age= age;
 
-    
-  
-    return res.redirect("/admin/register")
+
+    return res.redirect("/admin/register");
   }
 }
 

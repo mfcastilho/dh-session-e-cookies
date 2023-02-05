@@ -3,6 +3,7 @@ const express = require("express");
 const path = require("path");
 const methodOverride = require("method-override");
 const session = require("express-session");
+const cookieParser = require("cookie-parser");
 
 
 
@@ -22,6 +23,8 @@ app.set("views", path.resolve("src", "views"));
 
 
 //=== MIDDLEWARES ===
+
+app.use(cookieParser());
 app.use(session({
   secret:"minhasenhasecreta",
   resave:false,
