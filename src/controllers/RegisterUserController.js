@@ -5,7 +5,10 @@ const { validationResult } = require("express-validator");
 const RegisterUserController = {
   showRegisterUserPage:(req, res)=>{
 
+    //Se o cookie estiver armazenando a cor
     if(req.cookies.color){
+
+      //Se a session estiver aarmazenando o nome do usuário
       if(req.session.name){
         let userRegistered = req.session;
         let userRegisteredColor = req.cookies.color;
