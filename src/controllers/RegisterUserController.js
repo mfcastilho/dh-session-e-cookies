@@ -5,6 +5,15 @@ const { validationResult } = require("express-validator");
 const RegisterUserController = {
   showRegisterUserPage:(req, res)=>{
 
+    if(req.cookies.color){
+      if(req.session.name){
+        let userRegistered = req.session;
+        let userRegisteredColor = req.cookies.color;
+        return res.render("registerUser.ejs", {userRegisteredColor,userRegistered});
+      }
+      let userRegisteredColor = req.cookies.color;
+      return res.render("registerUser.ejs", {userRegisteredColor});
+    }
     if(req.session.name){
       let userRegistered = req.session;
       return res.render("registerUser.ejs", {userRegistered});
@@ -29,7 +38,7 @@ const RegisterUserController = {
 
     //GUardando a informção em um cookie
     if(req.body.remember_color){
-      res.cookie("color", req.body.color, {maxAge: (60 * 1000)});
+      res.cookie("color", req.body.color, {maxAge: (60 * 1000) * 30});
     }
 
 
@@ -49,7 +58,7 @@ const RegisterUserController = {
     req.session.color= null;
     req.session.email= null;
     req.session.age= null;
-    
+
     res.cookie("color", null, {maxAge:-1});
     res.send("A cor foi apagada coom sucesso!");
   }
