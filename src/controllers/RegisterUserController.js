@@ -43,6 +43,15 @@ const RegisterUserController = {
     }
 
     res.render("colorForm.ejs");
+  },
+  delete:(req, res)=>{
+    req.session.name= null;
+    req.session.color= null;
+    req.session.email= null;
+    req.session.age= null;
+    
+    res.cookie("color", null, {maxAge:-1});
+    res.send("A cor foi apagada coom sucesso!");
   }
 }
 
