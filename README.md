@@ -54,7 +54,7 @@ mensagem:
 - Modificar o formulário para que:
 > - [X] Tenha uma checkbox que diga "Lembrar a cor": se o visitante da aplicação
 marcar esta check box, a cor escolhida persistirá ao fechar e reabrir o navegador.
-> - [ ] Tenha um botão que implemente a funcionalidade "Esquecer a cor" que deve
+> - [X] Tenha um botão que implemente a funcionalidade "Esquecer a cor" que deve
 retornar tudo ao seu estado inicial.
 
 
