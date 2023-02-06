@@ -11,17 +11,26 @@
 
 main{
   width: 100%;
-  
+  width: 100%;
+  margin: 10rem auto;
 }
 
 .container{
-  width: 100%;
+  width: 60%;
   margin: 10rem auto;
 
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  
+
+  border: 1px solid rgb(124, 123, 123);
+  border-radius: 1rem;
+
+  padding-top: 2rem;
+
+  position: relative;
 }
 
 .container h2{
@@ -35,12 +44,8 @@ main{
  justify-content: center;
  align-items: center;
 
- width: 60%;
+ width: 100%;
 
- border: 1px solid rgb(124, 123, 123);
- border-radius: 1rem;
-
- padding-top: 2rem;
 }
 
 .container form label{
@@ -91,6 +96,12 @@ input:-webkit-autofill {
   background-color: #f0efef;
 }
 
+.send-btn-contaner{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
 .send-btn{
   font-size: 3rem;
 
@@ -103,7 +114,8 @@ input:-webkit-autofill {
   border: none;
   border-radius: 1rem;
 
-  margin-top: 2rem;
+  margin-top: 4rem;
+  margin-left: 4rem;
 }
 
 .send-btn:hover{
@@ -130,4 +142,35 @@ input:-webkit-autofill {
   margin-left: 5%;
   color: red;
   font-size: 1.4rem;
+}
+
+
+.container .forget-color-form{
+  border: none;
+}
+
+
+.btn-forget-color{
+  font-size: 3rem;
+
+  padding: 1rem 2.2rem;
+  margin-bottom: 2rem;
+
+  color: #FFF;
+  background-color: rgb(40, 158, 10);
+
+  border: none;
+  border-radius: 1rem;
+
+  margin-top: 2rem;
+
+  position: absolute;
+  right: 4rem;
+  bottom: 0;
+}
+
+.btn-forget-color:hover{
+  cursor: pointer;
+
+  background-color: rgb(26, 88, 10);
 }
